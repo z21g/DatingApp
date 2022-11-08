@@ -9,6 +9,9 @@ import { User } from '../_models/user';
   providedIn: 'root'
 })
 export class AccountService {
+  getMember(username: string) {
+    throw new Error('Method not implemented.');
+  }
   baseUrl = environment.apiUrl;
   private currentUserSource = new ReplaySubject<User>(1);
   currentUser$ = this.currentUserSource.asObservable();
